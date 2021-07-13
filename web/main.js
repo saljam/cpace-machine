@@ -33,6 +33,16 @@ function drop(e) {
 	}
 }
 
+async function sendTextContent() {
+	const textInput = document.getElementById("text-content");
+	const text = textInput.value;
+	if (text.length !== 0) {
+		await sendtext(text);
+		// clear the input field after sending
+		textInput.value = "";
+	}
+}
+
 // Handle a paste event from cmd-v/ctl-v.
 function pasteEvent(e) {
 	const files = e.clipboardData.files;
@@ -715,6 +725,7 @@ async function wasmready() {
 	);
 	document.getElementById("filepicker").addEventListener("change", pick);
 	document.getElementById("clipboard").addEventListener("click", pasteClipboard);
+	document.getElementById("send-text-content").addEventListener("click", sendTextContent);
 	document.getElementById("main").addEventListener("submit", preventdefault);
 	document.getElementById("main").addEventListener("submit", connect);
 	document.getElementById("qr").addEventListener("dblclick", copyurl);

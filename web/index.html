@@ -18,7 +18,13 @@
 <form id="main" role="main">
 <p id="info">WebWormhole lets you send files from one computer to another.</p>
 <div id="top">
-Drag and drop, <label id="filepicker-wrap" class="button">OPEN<input type="file" id="filepicker" disabled /></label>, or <input type="button" id="clipboard" class="button" value="PASTE" disabled /> files and text to send.
+    Drag and drop a file
+    <span class="alternative-divider"><span>OR</span></span>
+    <label id="filepicker-wrap" class="button">CHOOSE A FILE<input type="file" id="filepicker" disabled /></label>
+    <span class="alternative-divider"><span>OR</span></span>
+    <input type="button" id="clipboard" class="button" value="PASTE" disabled /> files and text
+    <span class="alternative-divider"><span>OR</span></span>
+    <input type="text" id="text-content" class="text-input" placeholder="Input text"/><input type="button" id="send-text-content" class="button" value="SEND"/>
 </div>
 <ul id="transfers"></ul>
 <div id="prompt">

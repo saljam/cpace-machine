@@ -144,6 +144,21 @@ body.connected {
 	display: inline-block;
 }
 
+.alternative-divider {
+	display: block;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid var(--grey-light);
+	line-height: 0.1em;
+	margin: 25px 0;
+}
+
+.alternative-divider span {
+	background: var(--purple);
+	color: var(--grey-light);
+	padding: 0 10px;
+}
+
 #transfers {
 	display: none;
 	list-style-type: none;
@@ -193,7 +208,7 @@ body.connected {
 	display: unset;
 }
 
-#magiccode {
+#magiccode, .text-input {
 	color: var(--yellow);
 	background: var(--yellow-tint);
 	border: 2px solid var(--yellow);
